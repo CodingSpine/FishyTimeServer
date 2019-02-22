@@ -1,0 +1,23 @@
+{
+    "name": "fishytimeserver",
+    "version": "0.1.0",
+    "main": "app.js",
+    "scripts": {},
+    "dependencies": {
+        "express": "^4.16.4",
+        "express-validator": "^5.3.1",
+        "mongodb": "^3.1.13",
+        "mongoose": "^5.4.8",
+        "body-parser": "^1.18.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CodingSpine/FishyTimeServer.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/CodingSpine/FishyTimeServer/issues"
+    },
+    "homepage": "https://github.com/CodingSpine/FishyTimeServer#readme"
+}
