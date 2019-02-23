@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const validator = require('express-validator');
 const {mongoose} = require('./db');
-var {User} = require('./models/user');
+const {User} = require('./models/user');
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
