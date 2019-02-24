@@ -6,6 +6,7 @@ const {mongoose} = require('./db');
 const {User} = require('./models/user');
 const activitiesRouter = require('./routes/activitiesRouter');
 const activityTypesRouter = require('./routes/activityTypesRouter');
+const logsRouter = require('./routes/logsRouter');
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
@@ -50,6 +51,7 @@ app.post('/login', (req, res) => {
 
 app.use('/activities', activitiesRouter);
 app.use('/activityTypes', activityTypesRouter);
+app.use('/logs', logsRouter);
 
 app.all('*', (req, res) => {
     return res.status(404).json('Unknown path');

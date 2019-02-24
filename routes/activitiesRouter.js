@@ -14,11 +14,12 @@ Goals to be accomplished in this router:
     2.1 This activity needs to have startTime, endTime, username, and activity name as mandatory values.
     2.2 The duration needs to be calculated before it is sent to db.
     2.3 If an activity's duration partially or completely overlaps another activity's, it should throw an error. (How do we achieve this? - Look into momentJS)
+    2.4 After posting a new activity, the 'log' table needs to be checked to see if the current week has been logged for 20 hours. If yes, then the 'loggedallhours' value needs to be udpated to 'true'
 3. Update an activity.
 4. Delete an activity. √
 */
 
-router.get('/:user', (req, res) => {
+activitiesRouter.get('/:username', (req, res) => {
     let username = req.params.username;
     User.findOne({
         username: username
@@ -38,7 +39,7 @@ router.get('/:user', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+activitiesRouter.post('/', (req, res) => {
     let username = req.body.username;
     let startTime = req.body.startTime;
     let endTime = req.body.endTime;
@@ -75,7 +76,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+activitiesRouter.delete('/:id', (req, res) => {
     if (!req.params.id){
         return res.status(422).json({
             error: 'Activity ID is required'
