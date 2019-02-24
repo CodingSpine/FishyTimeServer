@@ -26,7 +26,7 @@ router.delete('/:id', (req, res) => {
     Activity.findByIdAndDelete({
         _id: id
     }, (req, res) => {
-        return res.status(202).json({
+        return res.status(200).json({
             msg: 'Activity deleted'
         });
     });

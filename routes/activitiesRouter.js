@@ -61,7 +61,16 @@ router.post('/', (req, res) => {
             });
         }
         else {
-            let activity = new
+            //pending: find the duration, and check if it overlaps
+            let activity = new Activity(req.body);
+            activity.save().then(doc => {
+                if(!doc || doc.length == 0){
+                    return res.status(500).send(doc);
+                }
+                return res.status(201).send(d0c);
+            }).catch(err => {
+                res.status(500).json(err);
+            });
         }
     });
 });
@@ -75,7 +84,7 @@ router.delete('/:id', (req, res) => {
     Activity.findByIdAndDelete({
         _id: id
     }, (req, res) => {
-        return res.status(202).json({
+        return res.status(200).json({
             msg: 'Activity deleted'
         });
     });
