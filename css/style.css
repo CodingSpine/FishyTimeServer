@@ -198,3 +198,12 @@ a.article:hover {
     border-left: none;
     border-top: none;
 }
+
+
+.action-div{
+    display: inline-block;
+    border-radius: 10px;
+    padding: 2px 8px;
+    color: white;
+    opacity: 0.7;
+}
