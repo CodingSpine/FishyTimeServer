@@ -9,6 +9,7 @@ const activityTypesRouter = require('./routes/activityTypesRouter');
 const logsRouter = require('./routes/logsRouter');
 const PORT = process.env.PORT || 5000;
 
+const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
@@ -62,4 +63,4 @@ app.all('*', (req, res) => {
 
 
 
-app.listen(port, () => console.log(`listening on ${PORT}`));
+app.listen(PORT, () => console.log(`listening on ${PORT}`));

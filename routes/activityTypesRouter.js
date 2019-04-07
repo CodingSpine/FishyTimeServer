@@ -1,7 +1,7 @@
 const express = require('express');
 const activityTpesRouter = express.Router();
-const {User} = require('./models/user');
-const {ActivityType} = require('./models/activityType');
+const {User} = require('./../models/user');
+const {ActivityType} = require('./../models/activityType');
 
 
 /*
@@ -23,7 +23,7 @@ activityTpesRouter.post('/', (req, res) => {
             error: "Expected a 'type' value"
         });
     }
-    ActivityType.find({type : { $regex : new RegExp(req.body.type, "i") } }})
+    ActivityType.find({type : { $regex : new RegExp(req.body.type, "i") } })
         .then(docs => {
             if (docs.length){
                 return res.status(405).json({

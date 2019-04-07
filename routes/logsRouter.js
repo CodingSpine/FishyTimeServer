@@ -1,7 +1,7 @@
 const express = require('express');
 const logsRouter = express.Router();
-const {User} = require('./models/user');
-const {Log} = require('./models/log');
+const {User} = require('./../models/user');
+const {Log} = require('./../models/log');
 
 
 /*

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
-    username: { type: Schema.Types.ObjectId, ref: 'User' },
+    username: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     weekNumber: {type: Number, required: true},
     year: {type: Number, required: true},
     loggedallhours: {type: Boolean, required: true}
