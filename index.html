@@ -383,18 +383,55 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
-                            <div class="pt-3"></div>
-                            <p>3. There's another way to do this for layouts that doesn't have to put the navbar inside the container, and which doesn't require any CSS or Bootstrap overrides.
-
-                                Simply place a div with the Bootstrap container class around the navbar. This will center the links inside the navbar:
-
+                            (None as of now. This needs to be discussed later.)
                         </div>
                         <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
-                            <div class="pt-4"></div>
-                            <p>3. There's another way to do this for layouts that doesn't have to put the navbar inside the container, and which doesn't require any CSS or Bootstrap overrides.
-
-                                Simply place a div with the Bootstrap container class around the navbar. This will center the links inside the navbar:
-
+                            <div data-toggle="collapse" href="#deleteactivitiy" role="button" aria-expanded="false" aria-controls="deleteactivitiy">
+                                <div class="row">
+                                    <div class="action-url col-5">
+                                        <div class="bg-danger action-div">DELETE</div>
+                                        <div class="url">/activities/{id}</div>
+                                    </div>
+                                    <div class="action-details col-7">Delete a particular activity.</div>
+                                </div>
+                            </div>
+                            <div class="collapse card-body" id="deleteactivitiy">
+                                <h5>Delete a particular activity.</h5>
+                                <br>
+                                <h6>Path parameters</h6>
+                                <hr class="dashed">
+                                <div class="row">
+                                    <div class="col-5">
+                                        id
+                                    </div>
+                                    <div class="col-7">
+                                        The id of the activity to be deleted.
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-toggle="collapse" href="#deleteactivitiytype" role="button" aria-expanded="false" aria-controls="deleteactivitiytype">
+                                <div class="row">
+                                    <div class="action-url col-5">
+                                        <div class="bg-danger action-div">DELETE</div>
+                                        <div class="url">/activityTypes/{id}</div>
+                                    </div>
+                                    <div class="action-details col-7">Delete a particular activity type.</div>
+                                </div>
+                            </div>
+                            <div class="collapse card-body" id="deleteactivitiytype">
+                                <h5>Delete a particular activity type.</h5>
+                                <br>
+                                <h6>Path parameters</h6>
+                                <hr class="dashed">
+                                <div class="row">
+                                    <div class="col-5">
+                                        id
+                                    </div>
+                                    <div class="col-7">
+                                        The id of the activity type to be deleted.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
