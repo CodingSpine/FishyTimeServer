@@ -8,4 +8,13 @@ $(document).ready(function () {
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
+
+    $('.sidebar-link').on('click', function(event){
+        event.preventDefault();
+        $('.overall-section').each(function(i, section){
+            $(section).hide();
+        });
+        let section = $(this).attr('href');
+        $('#'+ section).show();
+    });
 });
