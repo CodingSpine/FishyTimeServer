@@ -262,7 +262,7 @@
                                 </div>
                             </div>
                             <div class="collapse card-body" id="createActivityType">
-                                <h5>Create a new type of activity that a user can do.</h5>
+                                <h5>Create a new type of activity that a user can do. (This endpoint is not yet ready)</h5>
                                 <br>
                                 <h6>Request body parameters</h6>
                                 <hr class="dashed">
@@ -285,11 +285,102 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="read" role="tabpanel" aria-labelledby="read-tab">
-                            <div class="pt-3"></div>
-                            <p>2. There's another way to do this for layouts that doesn't have to put the navbar inside the container, and which doesn't require any CSS or Bootstrap overrides.
-
-                                Simply place a div with the Bootstrap container class around the navbar. This will center the links inside the navbar:
-
+                            <div data-toggle="collapse" href="#usergetslogs" role="button" aria-expanded="false" aria-controls="usergetslogs">
+                                <div class="row">
+                                    <div class="action-url col-5">
+                                        <div class="bg-info action-div">GET</div>
+                                        <div class="url">/logs/{username}</div>
+                                    </div>
+                                    <div class="action-details col-7">Get all existing logs of the user in a week by week format, stating the week number, year, and whether all hours have been logged for the week.</div>
+                                </div>
+                            </div>
+                            <div class="collapse card-body" id="usergetslogs">
+                                <h5>Get all existing logs of the user</h5>
+                                <br>
+                                <h6>Path parameters</h6>
+                                <hr class="dashed">
+                                <div class="row">
+                                    <div class="col-5">
+                                        username
+                                    </div>
+                                    <div class="col-7">
+                                        The username for which the logs have to be fetched.
+                                    </div>
+                                </div>
+                                <br>
+                                <h6>Query string parameters</h6>
+                                <div>(None)</div>
+                            </div>
+                            <div data-toggle="collapse" href="#userlogscomplete" role="button" aria-expanded="false" aria-controls="userlogscomplete">
+                                <div class="row">
+                                    <div class="action-url col-5">
+                                        <div class="bg-info action-div">GET</div>
+                                        <div class="url">/logs/iscomplete/{username}</div>
+                                    </div>
+                                    <div class="action-details col-7">States whether the user has added all the required logs, up to the present day or week. If they have not completed, then the response also shows the incomplete weeks.</div>
+                                </div>
+                            </div>
+                            <div class="collapse card-body" id="userlogscomplete">
+                                <h5>States whether the user has added all the required logs</h5>
+                                <br>
+                                <h6>Path parameters</h6>
+                                <hr class="dashed">
+                                <div class="row">
+                                    <div class="col-5">
+                                        username
+                                    </div>
+                                    <div class="col-7">
+                                        The username for which completedness has to be determined.
+                                    </div>
+                                </div>
+                                <br>
+                                <h6>Query string parameters</h6>
+                                <div>(None)</div>
+                            </div>
+                            <div data-toggle="collapse" href="#allactivities" role="button" aria-expanded="false" aria-controls="allactivities">
+                                <div class="row">
+                                    <div class="action-url col-5">
+                                        <div class="bg-info action-div">GET</div>
+                                        <div class="url">/activities/{username}</div>
+                                    </div>
+                                    <div class="action-details col-7">Get all activities logged for a user since the beginning of time. It provides the name of the activity, as well as the start date, end date, and duration of the activity.</div>
+                                </div>
+                            </div>
+                            <div class="collapse card-body" id="allactivities">
+                                <h5>Get all activities logged for a user.</h5>
+                                <br>
+                                <h6>Path parameters</h6>
+                                <hr class="dashed">
+                                <div class="row">
+                                    <div class="col-5">
+                                        username
+                                    </div>
+                                    <div class="col-7">
+                                        The username for which the activities have to be fetched.
+                                    </div>
+                                </div>
+                                <br>
+                                <h6>Query string parameters</h6>
+                                <div>(None)</div>
+                            </div>
+                            <div data-toggle="collapse" href="#allactivittypes" role="button" aria-expanded="false" aria-controls="allactivittypes">
+                                <div class="row">
+                                    <div class="action-url col-5">
+                                        <div class="bg-info action-div">GET</div>
+                                        <div class="url">/activityTypes</div>
+                                    </div>
+                                    <div class="action-details col-7">Get all existing activity types.</div>
+                                </div>
+                            </div>
+                            <div class="collapse card-body" id="allactivittypes">
+                                <h5>Get all existing activity types</h5>
+                                <br>
+                                <h6>Path parameters</h6>
+                                <div>(None)</div>
+                                <br>
+                                <h6>Query string parameters</h6>
+                                <div>(None)</div>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
                             <div class="pt-3"></div>
